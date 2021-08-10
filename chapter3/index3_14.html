@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting to know Vue.js</title>
+    <!-- Refrence to Vue.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  </head>
+  <body>
+    <!-- Div to Mount the App -->
+    <div id="app"></div>
+    <!-- Script Element for our App -->
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          book: {
+            title: "Overly Complex Story",
+            price: 7.99,
+            id: 3,
+            genres: ["adult", "science fiction", "fiction"],
+            action: function () {
+              return "I did an action";
+            },
+          },
+        },
+        template: `
+          <ul>
+            <li v-for="(prop, key, index) in book">{{index}}) {{key}}: {{prop}}</li>
+          </ul>
+          `,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting to Know Vue.js</title>
+    <!--Reference to Vue.js library-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+<body>
+    <!-- Div to mount the App -->
+    <div id="app"></div>
+    <!--Script element for our app-->
+    <script>
+        var app = new Vue({
+            el: '#app',
+            method: {
+                userClickedAButton: function(){
+                    // Do Something Cool and meaningful here!!!
+                    console.log("Somthing cool would be nice.")
+                }
+            }
+        });
+    </script>
+</body>
+</html>
