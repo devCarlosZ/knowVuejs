@@ -60,15 +60,6 @@
        `,
         methods: {
           teenFilter: function () {
-            this.books = this.books.filter((book) => {
-              return (
-                book.genres.findIndex((genre) => {
-                  return genre === "teen";
-                }) >= 0
-              );
-            });
-          },
-          set: function () {
             var indexToReplace = 0;
             var newBook = {
               title: "Newer Entertaining Kids Book",
